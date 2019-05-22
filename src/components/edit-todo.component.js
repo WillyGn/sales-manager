@@ -5,6 +5,7 @@ export default class EditTodo extends Component{
         return(
             <div>
                 <p>Welcome to Edit ToDo Component!</p>
+                <p>Editar!</p>
             </div>
         )
     }
