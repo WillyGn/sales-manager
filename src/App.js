@@ -2,15 +2,20 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import CreateTodo from "./components/create-todos.component";
+import EditTodo from "./components/edit-todo.component";
+import TodosList from "./components/todos-list.component";
+
 function App() {
   return (
     <Router>
       <div className="container">
         <h2>MERN-Stack Sales Manager</h2>
+        <Route path="/" exact component={TodosList} />
+        <Route path="/edit/:id" component={EditTodo} />
+        <Route path="/create" component={CreateTodo} />
       </div>
-      <Route path="/" exact component={TodosList} />
-      <Route path="/edit/:id" component={EditTodo} />
-      <Route path="7create" component={CreateTodo} />
+
     </Router>
   );
 }
